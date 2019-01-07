@@ -1,6 +1,105 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# elements:Вилка_PLS6
+#
+DEF ~elements:Вилка_PLS6 XP 0 40 Y Y 1 F N
+F0 "XP" 100 100 60 H V C CNN
+F1 "elements:Вилка_PLS6" 300 -775 60 H I C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 0 0 300 -675 0 1 0 N
+P 2 0 1 0 100 -150 125 -125 N
+P 2 0 1 0 125 -125 125 -200 N
+P 2 0 1 0 150 -150 125 -125 N
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+X 5 5 500 -500 200 L 50 50 1 1 I
+X 6 6 500 -600 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Вилка_PLS8
+#
+DEF ~elements:Вилка_PLS8 XP 0 40 Y Y 1 F N
+F0 "XP" 100 100 60 H V C CNN
+F1 "elements:Вилка_PLS8" 250 -950 60 H I C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 0 0 300 -900 0 1 0 N
+P 2 0 1 0 100 -100 100 -175 N
+P 3 0 1 0 75 -125 100 -100 125 -125 N
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+X 5 5 500 -500 200 L 50 50 1 1 I
+X 6 6 500 -600 200 L 50 50 1 1 I
+X 7 7 500 -700 200 L 50 50 1 1 I
+X 8 8 500 -800 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Конденсатор_керамический
+#
+DEF elements:Конденсатор_керамический C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "elements:Конденсатор_керамический" 100 -100 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Предохранитель
+#
+DEF elements:Предохранитель FU 0 40 Y Y 1 F N
+F0 "FU" -25 150 60 H V C CNN
+F1 "elements:Предохранитель" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 75 200 -75 0 1 0 N
+P 2 0 1 0 -200 0 200 0 N
+X ~ 1 -400 0 200 R 50 50 1 1 I
+X ~ 2 400 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Транзистор_полевой_N-канал
+#
+DEF elements:Транзистор_полевой_N-канал VT 0 40 Y Y 1 F N
+F0 "VT" 125 500 60 H V C CNN
+F1 "elements:Транзистор_полевой_N-канал" 100 -200 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+C 150 150 270 0 1 0 N
+P 2 0 1 0 0 0 -50 0 N
+P 2 0 1 0 0 300 0 0 N
+P 2 0 1 0 100 -50 100 50 N
+P 2 0 1 0 100 100 100 200 N
+P 2 0 1 0 100 150 150 125 N
+P 2 0 1 0 100 150 150 175 N
+P 2 0 1 0 100 150 350 150 N
+P 2 0 1 0 100 250 100 350 N
+P 2 0 1 0 350 0 100 0 N
+P 2 0 1 0 350 150 350 0 N
+P 2 0 1 0 350 300 100 300 N
+X ~ 1 -250 0 200 R 50 50 1 1 I
+X ~ 2 550 300 200 L 50 50 1 1 I
+X ~ 3 550 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # elements:Транзистор_полевой_P-канал
 #
 DEF elements:Транзистор_полевой_P-канал VT 0 40 Y Y 1 F N

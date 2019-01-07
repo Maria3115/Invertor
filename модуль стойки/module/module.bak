@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:module-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,60 +15,169 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MOTOR:Транзистор_полевой_N-канал VT?
+L elements:Транзистор_полевой_N-канал VT2
 U 1 1 5C236B1C
 P 4700 3850
-F 0 "VT?" H 4850 4457 60  0000 C CNN
+F 0 "VT2" H 4850 4457 60  0000 C CNN
 F 1 "Транзистор_полевой_N-канал" H 4850 4351 60  0000 C CNN
-F 2 "" H 4700 3850 60  0001 C CNN
+F 2 "MOTOR_IMPORT_OTK:Транзистор_N_STP10NK60Z" H 4700 3850 60  0001 C CNN
 F 3 "" H 4700 3850 60  0001 C CNN
 	1    4700 3850
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOTOR:отверстие_под_пайку XS?
+L elements:отверстие_под_пайку XS1
 U 1 1 5C236D99
-P 2900 2500
-F 0 "XS?" H 2940 2578 60  0000 L CNN
-F 1 "отверстие_под_пайку" H 2940 2472 60  0000 L CNN
-F 2 "" H 2900 2500 60  0001 C CNN
-F 3 "" H 2900 2500 60  0001 C CNN
-	1    2900 2500
-	1    0    0    -1  
+P 2800 2500
+F 0 "XS1" H 2840 2578 60  0000 L CNN
+F 1 "24" H 2840 2472 60  0000 L CNN
+F 2 "MOTOR_ICO:Отверстие_под_пайку_D1.2" H 2800 2500 60  0001 C CNN
+F 3 "" H 2800 2500 60  0001 C CNN
+	1    2800 2500
+	-1   0    0    -1  
 $EndComp
 $Comp
-L MOTOR:отверстие_под_пайку XS?
+L elements:отверстие_под_пайку XS2
 U 1 1 5C236DF4
-P 2950 3200
-F 0 "XS?" H 2990 3278 60  0000 L CNN
-F 1 "отверстие_под_пайку" H 2990 3172 60  0000 L CNN
-F 2 "" H 2950 3200 60  0001 C CNN
-F 3 "" H 2950 3200 60  0001 C CNN
-	1    2950 3200
-	1    0    0    -1  
+P 2850 3200
+F 0 "XS2" H 2890 3278 60  0000 L CNN
+F 1 "K1" H 2890 3172 60  0000 L CNN
+F 2 "MOTOR_ICO:Отверстие_под_пайку_D1.2" H 2850 3200 60  0001 C CNN
+F 3 "" H 2850 3200 60  0001 C CNN
+	1    2850 3200
+	-1   0    0    -1  
 $EndComp
 $Comp
-L MOTOR:отверстие_под_пайку XS?
+L elements:отверстие_под_пайку XS3
 U 1 1 5C236E57
-P 2950 3850
-F 0 "XS?" H 2990 3928 60  0000 L CNN
-F 1 "отверстие_под_пайку" H 2990 3822 60  0000 L CNN
-F 2 "" H 2950 3850 60  0001 C CNN
-F 3 "" H 2950 3850 60  0001 C CNN
-	1    2950 3850
-	1    0    0    -1  
+P 2850 3850
+F 0 "XS3" H 2890 3928 60  0000 L CNN
+F 1 "K3" H 2890 3822 60  0000 L CNN
+F 2 "MOTOR_ICO:Отверстие_под_пайку_D1.2" H 2850 3850 60  0001 C CNN
+F 3 "" H 2850 3850 60  0001 C CNN
+	1    2850 3850
+	-1   0    0    -1  
 $EndComp
 $Comp
-L MOTOR:отверстие_под_пайку XS?
+L elements:отверстие_под_пайку XS4
 U 1 1 5C236EBA
-P 2950 4600
-F 0 "XS?" H 2990 4678 60  0000 L CNN
-F 1 "отверстие_под_пайку" H 2990 4572 60  0000 L CNN
-F 2 "" H 2950 4600 60  0001 C CNN
-F 3 "" H 2950 4600 60  0001 C CNN
-	1    2950 4600
+P 2850 4600
+F 0 "XS4" H 2890 4678 60  0000 L CNN
+F 1 "gnd" H 2890 4572 60  0000 L CNN
+F 2 "MOTOR_ICO:Отверстие_под_пайку_D1.2" H 2850 4600 60  0001 C CNN
+F 3 "" H 2850 4600 60  0001 C CNN
+	1    2850 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L elements:Транзистор_полевой_P-канал VT1
+U 1 1 5C239EE3
+P 4700 3050
+F 0 "VT1" H 4850 3657 60  0000 C CNN
+F 1 "Транзистор_полевой_P-канал" H 4850 3551 60  0000 C CNN
+F 2 "MOTOR_IMPORT_OTK:Транзистор_P_IRF9Z24NPBF" H 4700 3050 60  0001 C CNN
+F 3 "" H 4700 3050 60  0001 C CNN
+	1    4700 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 3850 4450 3850
+	5250 3550 5350 3550
+Wire Wire Line
+	5350 3550 5350 3350
+Wire Wire Line
+	5350 3050 5250 3050
+Wire Wire Line
+	2950 3200 3750 3200
+Wire Wire Line
+	3750 3200 3750 3050
+Wire Wire Line
+	3750 3050 4050 3050
+Wire Wire Line
+	2900 2500 5250 2500
+Wire Wire Line
+	5250 2500 5250 2750
+Wire Wire Line
+	2950 4600 3950 4600
+Wire Wire Line
+	5250 4600 5250 3850
+$Comp
+L elements:отверстие_под_пайку XS5
+U 1 1 5C23A0C2
+P 5950 3350
+F 0 "XS5" H 5990 3428 60  0000 L CNN
+F 1 "фаза" H 5990 3322 60  0000 L CNN
+F 2 "MOTOR_ICO:Отверстие_под_пайку_D1.2" H 5950 3350 60  0001 C CNN
+F 3 "" H 5950 3350 60  0001 C CNN
+	1    5950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3350 5350 3350
+Connection ~ 5350 3350
+Wire Wire Line
+	5350 3350 5350 3050
+$Comp
+L elements:Конденсатор_керамический C3
+U 1 1 5C25C9F8
+P 6500 3500
+F 0 "C3" V 6472 3588 60  0000 L CNN
+F 1 "Конденсатор_керамический" V 6578 3588 60  0000 L CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_1812" H 6500 3500 60  0001 C CNN
+F 3 "" H 6500 3500 60  0001 C CNN
+	1    6500 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 4600 6500 4600
+Wire Wire Line
+	6500 4600 6500 3600
+Connection ~ 5250 4600
+Wire Wire Line
+	6500 3450 6500 2500
+Wire Wire Line
+	6500 2500 5250 2500
+Connection ~ 5250 2500
+$Comp
+L elements:Конденсатор_керамический C1
+U 1 1 5C25CC91
+P 3950 4200
+F 0 "C1" V 3922 4288 60  0000 L CNN
+F 1 "Конденсатор_керамический" V 4028 4288 60  0000 L CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_1812" H 3950 4200 60  0001 C CNN
+F 3 "" H 3950 4200 60  0001 C CNN
+	1    3950 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 4150 3950 3850
+Wire Wire Line
+	2950 3850 3950 3850
+Connection ~ 3950 3850
+Wire Wire Line
+	3950 3850 4450 3850
+Wire Wire Line
+	3950 4300 3950 4600
+Connection ~ 3950 4600
+Wire Wire Line
+	3950 4600 5250 4600
+$Comp
+L elements:Конденсатор_керамический C2
+U 1 1 5C25D02F
+P 4050 3150
+F 0 "C2" V 4022 3238 60  0000 L CNN
+F 1 "Конденсатор_керамический" V 4128 3238 60  0000 L CNN
+F 2 "MOTOR_RLC:Конденсатор_SMD_1812" H 4050 3150 60  0001 C CNN
+F 3 "" H 4050 3150 60  0001 C CNN
+	1    4050 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 3100 4050 3050
+Connection ~ 4050 3050
+Wire Wire Line
+	4050 3050 4450 3050
+Wire Wire Line
+	4050 3250 4050 3350
+Wire Wire Line
+	4050 3350 5350 3350
 $EndSCHEMATC
