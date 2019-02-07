@@ -1,0 +1,235 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# MOTOR:5559ИН28У
+#
+DEF MOTOR:5559ИН28У DD 0 40 Y Y 1 F N
+F0 "DD" 350 550 60 H V C CNN
+F1 "MOTOR:5559ИН28У" 0 -400 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+T 0 0 350 60 0 0 0 RXT Normal 0 C C
+S -300 -450 -550 450 0 0 0 N
+S 300 450 -300 -450 0 0 0 N
+S 550 -450 300 -100 0 0 0 N
+S 550 -100 300 250 0 0 0 N
+S 550 250 300 450 0 0 0 N
+P 2 0 0 0 320 150 330 160 N
+P 2 0 0 0 400 150 390 140 N
+P 4 0 0 0 360 180 390 220 330 220 360 180 N
+P 4 0 0 0 360 360 390 400 330 400 360 360 N
+P 4 0 0 0 390 160 400 150 320 150 330 140 N
+X RO 1 750 350 200 L 50 50 1 1 I
+X nRE 2 -750 150 200 R 50 50 1 1 I
+X DE 3 -750 0 200 R 50 50 1 1 I
+X DI 4 -750 -150 200 R 50 50 1 1 I
+X GND 5 750 -200 200 L 50 50 1 1 I X
+X AY 6 750 150 200 L 50 50 1 1 I
+X BZ 7 750 0 200 L 50 50 1 1 I
+X Ucc 8 750 -350 200 L 50 50 1 1 I X
+ENDDRAW
+ENDDEF
+#
+# elements:KP1128KT3
+#
+DEF elements:KP1128KT3 DA 0 40 Y Y 1 F N
+F0 "DA" 850 100 50 H V C CNN
+F1 "elements:KP1128KT3" 450 -850 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 0 50 900 -750 0 1 0 N
+X 3_сост(1,2) 1 -100 0 100 R 50 50 1 1 I
+X V3in 10 1000 -600 100 L 50 50 1 1 I
+X V3out 11 1000 -500 100 L 50 50 1 1 I
+X com 12 1000 -400 100 L 50 50 1 1 I
+X com 13 1000 -300 100 L 50 50 1 1 I
+X V4out 14 1000 -200 100 L 50 50 1 1 I
+X V4in 15 1000 -100 100 L 50 50 1 1 I
+X Vcc(цифр) 16 1000 0 100 L 50 50 1 1 I
+X V1in 2 -100 -100 100 R 50 50 1 1 I
+X V1out 3 -100 -200 100 R 50 50 1 1 I
+X com 4 -100 -300 100 R 50 50 1 1 I
+X com 5 -100 -400 100 R 50 50 1 1 I
+X v2out 6 -100 -500 100 R 50 50 1 1 I
+X V2in 7 -100 -600 100 R 50 50 1 1 I
+X Vcc 8 -100 -700 100 R 50 50 1 1 I
+X 3_сост_(3,4) 9 1000 -700 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Конденсатор_керамический
+#
+DEF elements:Конденсатор_керамический C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "elements:Конденсатор_керамический" 100 -100 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Модульпитания
+#
+DEF elements:Модульпитания G 0 40 Y Y 1 F N
+F0 "G" 350 100 50 H V C CNN
+F1 "elements:Модульпитания" 350 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 100 50 550 -150 0 1 0 N
+X Vin 1 0 0 100 R 50 50 1 1 I
+X gnd 2 0 -100 100 R 50 50 1 1 I
+X Vout 3 650 0 100 L 50 50 1 1 I
+X GND1 4 650 -100 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Предохранитель
+#
+DEF elements:Предохранитель FU 0 40 Y Y 1 F N
+F0 "FU" -25 150 60 H V C CNN
+F1 "elements:Предохранитель" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 75 200 -75 0 1 0 N
+P 2 0 1 0 -200 0 200 0 N
+X ~ 1 -400 0 200 R 50 50 1 1 I
+X ~ 2 400 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Резистор_0,125Вт
+#
+DEF elements:Резистор_0,125Вт R 0 40 Y Y 1 F N
+F0 "R" -25 150 60 H V C CNN
+F1 "elements:Резистор_0,125Вт" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 75 200 -75 0 1 0 N
+P 2 0 1 0 0 50 -100 -50 N
+P 2 0 1 0 100 50 0 -50 N
+X ~ 1 -400 0 200 R 50 50 1 1 I
+X ~ 2 400 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Резистор_0,5Вт
+#
+DEF elements:Резистор_0,5Вт R 0 40 Y Y 1 F N
+F0 "R" -25 150 60 H V C CNN
+F1 "elements:Резистор_0,5Вт" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 75 200 -75 0 1 0 N
+P 2 0 1 0 -100 0 100 0 N
+X ~ 1 -400 0 200 R 50 50 1 1 I
+X ~ 2 400 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:Светодиод
+#
+DEF elements:Светодиод HL 0 40 Y Y 1 F N
+F0 "HL" 150 160 60 H V C CNN
+F1 "elements:Светодиод" 170 -160 60 H V C CNN
+F2 "" 300 -500 60 H I C CNN
+F3 "" 300 -500 60 H I C CNN
+DRAW
+C 150 0 100 0 1 0 N
+P 2 0 1 0 100 0 200 0 N
+P 2 0 1 0 175 50 175 -50 N
+P 2 0 1 0 250 125 225 125 N
+P 2 0 1 0 265 80 290 105 N
+P 2 0 1 0 290 80 290 105 N
+P 2 0 1 0 290 105 265 105 N
+P 3 0 1 0 225 100 250 125 250 100 N
+P 4 0 1 0 125 50 125 -50 175 0 125 50 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 2 300 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# elements:отверстие_под_пайку
+#
+DEF elements:отверстие_под_пайку XS 0 40 Y Y 1 F N
+F0 "XS" 0 350 60 H V C CNN
+F1 "elements:отверстие_под_пайку" 50 -350 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+C 0 0 5 0 1 0 N
+C 0 0 11 0 1 0 N
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 0 150 0 250 N
+X ~ 1 0 0 200 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# modules:Module_halfbridge
+#
+DEF modules:Module_halfbridge A 0 40 Y Y 1 F N
+F0 "A" 500 100 50 H V C CNN
+F1 "modules:Module_halfbridge" 300 -850 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 0 50 550 -750 0 1 0 N
+X 12DC 1 -100 0 100 R 50 50 1 1 I
+X Phase 10 650 -200 100 L 50 50 1 1 I
+X Phase 11 650 -300 100 L 50 50 1 1 I
+X Phase 12 650 -400 100 L 50 50 1 1 I
+X Phase 13 650 -500 100 L 50 50 1 1 I
+X Phase 14 650 -600 100 L 50 50 1 1 I
+X 12DC 2 -100 -100 100 R 50 50 1 1 I
+X 12DC 3 -100 -200 100 R 50 50 1 1 I
+X K1 4 -100 -300 100 R 50 50 1 1 I
+X K2 5 -100 -400 100 R 50 50 1 1 I
+X 0DC 6 -100 -500 100 R 50 50 1 1 I
+X 0DC 7 -100 -600 100 R 50 50 1 1 I
+X 0DC 8 -100 -700 100 R 50 50 1 1 I
+X Phase 9 650 -100 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# modules:plata_avr8
+#
+DEF modules:plata_avr8 A 0 40 Y Y 1 F N
+F0 "A" 600 100 50 H V C CNN
+F1 "modules:plata_avr8" 350 -1000 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 0 50 650 -950 0 1 0 N
+X PD3 1 -100 0 100 R 50 50 1 1 I
+X gnd 10 -100 -900 100 R 50 50 1 1 I
+X AVCC 11 750 0 100 L 50 50 1 1 I
+X Aref 12 750 -100 100 L 50 50 1 1 I
+X gnd 13 750 -200 100 L 50 50 1 1 I
+X PC0 14 750 -300 100 L 50 50 1 1 I
+X PC1 15 750 -400 100 L 50 50 1 1 I
+X PC2 16 750 -500 100 L 50 50 1 1 I
+X Ucc 17 750 -600 100 L 50 50 1 1 I
+X gnd 18 750 -700 100 L 50 50 1 1 I
+X rx 19 750 -800 100 L 50 50 1 1 I
+X PD4 2 -100 -100 100 R 50 50 1 1 I
+X tx 20 750 -900 100 L 50 50 1 1 I
+X PB6 3 -100 -200 100 R 50 50 1 1 I
+X PB7 4 -100 -300 100 R 50 50 1 1 I
+X PB5 5 -100 -400 100 R 50 50 1 1 I
+X PB6 6 -100 -500 100 R 50 50 1 1 I
+X PB0 7 -100 -600 100 R 50 50 1 1 I
+X PB2 8 -100 -700 100 R 50 50 1 1 I
+X UCC 9 -100 -800 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

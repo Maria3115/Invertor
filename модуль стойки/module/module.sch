@@ -349,4 +349,38 @@ Wire Wire Line
 Connection ~ 6300 4600
 Wire Wire Line
 	6300 4600 6500 4600
+$Comp
+L elements:Светодиод HL1
+U 1 1 5C3F6AD0
+P 7350 2100
+F 0 "HL1" H 7500 2412 60  0000 C CNN
+F 1 "Светодиод" H 7500 2306 60  0000 C CNN
+F 2 "N_VD_HL:Светодиод_SMD_0603" H 7650 1600 60  0001 C CNN
+F 3 "" H 7650 1600 60  0001 C CNN
+	1    7350 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L elements:Резистор_0,125Вт R5
+U 1 1 5C3F6DAB
+P 6850 2100
+F 0 "R5" H 6850 2362 60  0000 C CNN
+F 1 "Резистор_0,125Вт" H 6850 2256 60  0000 C CNN
+F 2 "N_RLC:Резистор_SMD_0805_0,125Вт" H 6850 2100 60  0001 C CNN
+F 3 "" H 6850 2100 60  0001 C CNN
+	1    6850 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2100 6450 2100
+Connection ~ 6300 2100
+Wire Wire Line
+	7250 2100 7350 2100
+Wire Wire Line
+	7650 2100 8400 2100
+Wire Wire Line
+	8400 2100 8400 4600
+Wire Wire Line
+	8400 4600 6500 4600
+Connection ~ 6500 4600
 $EndSCHEMATC
