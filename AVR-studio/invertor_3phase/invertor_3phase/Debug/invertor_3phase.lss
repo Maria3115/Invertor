@@ -1,0 +1,347 @@
+
+invertor_3phase.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000015e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000046  00800060  0000015e  000001d2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  00000218  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000248  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000090  00000000  00000000  00000284  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000012e4  00000000  00000000  00000314  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000732  00000000  00000000  000015f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000072c  00000000  00000000  00001d2a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000024c  00000000  00000000  00002458  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000004c2  00000000  00000000  000026a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000018b0  00000000  00000000  00002b66  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000c8  00000000  00000000  00004416  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	24 c0       	rjmp	.+72     	; 0x4c <__bad_interrupt>
+   4:	23 c0       	rjmp	.+70     	; 0x4c <__bad_interrupt>
+   6:	22 c0       	rjmp	.+68     	; 0x4c <__bad_interrupt>
+   8:	21 c0       	rjmp	.+66     	; 0x4c <__bad_interrupt>
+   a:	20 c0       	rjmp	.+64     	; 0x4c <__bad_interrupt>
+   c:	1f c0       	rjmp	.+62     	; 0x4c <__bad_interrupt>
+   e:	1e c0       	rjmp	.+60     	; 0x4c <__bad_interrupt>
+  10:	1d c0       	rjmp	.+58     	; 0x4c <__bad_interrupt>
+  12:	1c c0       	rjmp	.+56     	; 0x4c <__bad_interrupt>
+  14:	1b c0       	rjmp	.+54     	; 0x4c <__bad_interrupt>
+  16:	1a c0       	rjmp	.+52     	; 0x4c <__bad_interrupt>
+  18:	19 c0       	rjmp	.+50     	; 0x4c <__bad_interrupt>
+  1a:	18 c0       	rjmp	.+48     	; 0x4c <__bad_interrupt>
+  1c:	17 c0       	rjmp	.+46     	; 0x4c <__bad_interrupt>
+  1e:	16 c0       	rjmp	.+44     	; 0x4c <__bad_interrupt>
+  20:	15 c0       	rjmp	.+42     	; 0x4c <__bad_interrupt>
+  22:	14 c0       	rjmp	.+40     	; 0x4c <__bad_interrupt>
+  24:	13 c0       	rjmp	.+38     	; 0x4c <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d4 e0       	ldi	r29, 0x04	; 4
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_copy_data>:
+  32:	10 e0       	ldi	r17, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	ee e5       	ldi	r30, 0x5E	; 94
+  3a:	f1 e0       	ldi	r31, 0x01	; 1
+  3c:	02 c0       	rjmp	.+4      	; 0x42 <__SREG__+0x3>
+  3e:	05 90       	lpm	r0, Z+
+  40:	0d 92       	st	X+, r0
+  42:	a6 3a       	cpi	r26, 0xA6	; 166
+  44:	b1 07       	cpc	r27, r17
+  46:	d9 f7       	brne	.-10     	; 0x3e <__SP_H__>
+  48:	02 d0       	rcall	.+4      	; 0x4e <main>
+  4a:	87 c0       	rjmp	.+270    	; 0x15a <_exit>
+
+0000004c <__bad_interrupt>:
+  4c:	d9 cf       	rjmp	.-78     	; 0x0 <__vectors>
+
+0000004e <main>:
+#include "C:\el_nikitos\AVR_Lib\GPIO.h"
+#include "C:\el_nikitos\AVR_Lib\TWI_wire.h"
+#include "C:\el_nikitos\AVR_Lib\UART_Serial.h"
+
+int main(void)
+{
+  4e:	a8 e9       	ldi	r26, 0x98	; 152
+  50:	b0 e0       	ldi	r27, 0x00	; 0
+  52:	ed 91       	ld	r30, X+
+  54:	fc 91       	ld	r31, X
+  56:	11 97       	sbiw	r26, 0x01	; 1
+  58:	16 96       	adiw	r26, 0x06	; 6
+  5a:	2c 91       	ld	r18, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  5c:	82 2f       	mov	r24, r18
+  5e:	80 95       	com	r24
+  60:	90 81       	ld	r25, Z
+  62:	89 23       	and	r24, r25
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  64:	82 2b       	or	r24, r18
+  66:	80 83       	st	Z, r24
+  68:	a7 e6       	ldi	r26, 0x67	; 103
+  6a:	b0 e0       	ldi	r27, 0x00	; 0
+  6c:	ed 91       	ld	r30, X+
+  6e:	fc 91       	ld	r31, X
+  70:	11 97       	sbiw	r26, 0x01	; 1
+  72:	16 96       	adiw	r26, 0x06	; 6
+  74:	2c 91       	ld	r18, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  76:	82 2f       	mov	r24, r18
+  78:	80 95       	com	r24
+  7a:	90 81       	ld	r25, Z
+  7c:	89 23       	and	r24, r25
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  7e:	82 2b       	or	r24, r18
+  80:	80 83       	st	Z, r24
+  82:	a0 e6       	ldi	r26, 0x60	; 96
+  84:	b0 e0       	ldi	r27, 0x00	; 0
+  86:	ed 91       	ld	r30, X+
+  88:	fc 91       	ld	r31, X
+  8a:	11 97       	sbiw	r26, 0x01	; 1
+  8c:	16 96       	adiw	r26, 0x06	; 6
+  8e:	2c 91       	ld	r18, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  90:	82 2f       	mov	r24, r18
+  92:	80 95       	com	r24
+  94:	90 81       	ld	r25, Z
+  96:	89 23       	and	r24, r25
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  98:	82 2b       	or	r24, r18
+  9a:	80 83       	st	Z, r24
+  9c:	e3 e8       	ldi	r30, 0x83	; 131
+  9e:	f0 e0       	ldi	r31, 0x00	; 0
+  a0:	a0 81       	ld	r26, Z
+  a2:	b1 81       	ldd	r27, Z+1	; 0x01
+  a4:	26 81       	ldd	r18, Z+6	; 0x06
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  a6:	82 2f       	mov	r24, r18
+  a8:	80 95       	com	r24
+  aa:	9c 91       	ld	r25, X
+  ac:	89 23       	and	r24, r25
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  ae:	82 2b       	or	r24, r18
+  b0:	8c 93       	st	X, r24
+  b2:	cc e7       	ldi	r28, 0x7C	; 124
+  b4:	d0 e0       	ldi	r29, 0x00	; 0
+  b6:	a8 81       	ld	r26, Y
+  b8:	b9 81       	ldd	r27, Y+1	; 0x01
+  ba:	2e 81       	ldd	r18, Y+6	; 0x06
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  bc:	82 2f       	mov	r24, r18
+  be:	80 95       	com	r24
+  c0:	9c 91       	ld	r25, X
+  c2:	89 23       	and	r24, r25
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  c4:	82 2b       	or	r24, r18
+  c6:	8c 93       	st	X, r24
+  c8:	ca e8       	ldi	r28, 0x8A	; 138
+  ca:	d0 e0       	ldi	r29, 0x00	; 0
+  cc:	a8 81       	ld	r26, Y
+  ce:	b9 81       	ldd	r27, Y+1	; 0x01
+  d0:	8e 81       	ldd	r24, Y+6	; 0x06
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  d2:	28 2f       	mov	r18, r24
+  d4:	20 95       	com	r18
+  d6:	9c 91       	ld	r25, X
+  d8:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  da:	89 2b       	or	r24, r25
+  dc:	8c 93       	st	X, r24
+  de:	a0 81       	ld	r26, Z
+  e0:	b1 81       	ldd	r27, Z+1	; 0x01
+  e2:	86 81       	ldd	r24, Z+6	; 0x06
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  e4:	28 2f       	mov	r18, r24
+  e6:	20 95       	com	r18
+  e8:	9c 91       	ld	r25, X
+  ea:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+  ec:	89 2b       	or	r24, r25
+  ee:	8c 93       	st	X, r24
+  f0:	af e9       	ldi	r26, 0x9F	; 159
+  f2:	b0 e0       	ldi	r27, 0x00	; 0
+  f4:	ed 91       	ld	r30, X+
+  f6:	fc 91       	ld	r31, X
+  f8:	11 97       	sbiw	r26, 0x01	; 1
+  fa:	16 96       	adiw	r26, 0x06	; 6
+  fc:	8c 91       	ld	r24, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+  fe:	28 2f       	mov	r18, r24
+ 100:	20 95       	com	r18
+ 102:	90 81       	ld	r25, Z
+ 104:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+ 106:	89 2b       	or	r24, r25
+ 108:	80 83       	st	Z, r24
+ 10a:	a1 e9       	ldi	r26, 0x91	; 145
+ 10c:	b0 e0       	ldi	r27, 0x00	; 0
+ 10e:	ed 91       	ld	r30, X+
+ 110:	fc 91       	ld	r31, X
+ 112:	11 97       	sbiw	r26, 0x01	; 1
+ 114:	16 96       	adiw	r26, 0x06	; 6
+ 116:	8c 91       	ld	r24, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+ 118:	28 2f       	mov	r18, r24
+ 11a:	20 95       	com	r18
+ 11c:	90 81       	ld	r25, Z
+ 11e:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+ 120:	89 2b       	or	r24, r25
+ 122:	80 83       	st	Z, r24
+ 124:	a5 e7       	ldi	r26, 0x75	; 117
+ 126:	b0 e0       	ldi	r27, 0x00	; 0
+ 128:	ed 91       	ld	r30, X+
+ 12a:	fc 91       	ld	r31, X
+ 12c:	11 97       	sbiw	r26, 0x01	; 1
+ 12e:	16 96       	adiw	r26, 0x06	; 6
+ 130:	8c 91       	ld	r24, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+ 132:	28 2f       	mov	r18, r24
+ 134:	20 95       	com	r18
+ 136:	90 81       	ld	r25, Z
+ 138:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+ 13a:	89 2b       	or	r24, r25
+ 13c:	80 83       	st	Z, r24
+ 13e:	ae e6       	ldi	r26, 0x6E	; 110
+ 140:	b0 e0       	ldi	r27, 0x00	; 0
+ 142:	ed 91       	ld	r30, X+
+ 144:	fc 91       	ld	r31, X
+ 146:	11 97       	sbiw	r26, 0x01	; 1
+ 148:	16 96       	adiw	r26, 0x06	; 6
+ 14a:	8c 91       	ld	r24, X
+	};
+	/* конец определения всех возможных GPIO*/
+
+void pinMode(struct_GPIO port_and_number, enumLevel Level)	{
+	byte byteBuferPort = *port_and_number.DDR;
+	byteBuferPort &= ~port_and_number.pinNumber;
+ 14c:	28 2f       	mov	r18, r24
+ 14e:	20 95       	com	r18
+ 150:	90 81       	ld	r25, Z
+ 152:	92 23       	and	r25, r18
+	if (Level)	{
+		Level = 0b11111111;
+	}
+	byteBuferPort |= (port_and_number.pinNumber & Level);
+	*port_and_number.DDR = byteBuferPort;
+ 154:	89 2b       	or	r24, r25
+ 156:	80 83       	st	Z, r24
+ 158:	ff cf       	rjmp	.-2      	; 0x158 <main+0x10a>
+
+0000015a <_exit>:
+ 15a:	f8 94       	cli
+
+0000015c <__stop_program>:
+ 15c:	ff cf       	rjmp	.-2      	; 0x15c <__stop_program>
