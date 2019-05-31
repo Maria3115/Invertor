@@ -57,14 +57,7 @@ void loop()
   {
     digitalWrite(da2_k2, HIGH);
   }
-  
-  //pwm(da2_k2, 20);
-/*
-  digitalWrite(PB1, HIGH);
-  delay(500);
-  digitalWrite(PB1, LOW);
-  delay(500);
-*/
+
   if (byte_count > byte_max_range)
   {
     byte_count = 0;
@@ -73,12 +66,6 @@ void loop()
     //Serial.write(10);
   }
 
-  /*
-  if (byte_chanel1_value > byte_max_range)
-  {
-    byte_chanel1_value = 0;
-  }
-  */
   delay_counters( 100 );
 }
 
@@ -98,7 +85,7 @@ ISR(USART_RXC_vect)
 {
   byte buf = UDR - 48;
 
-  if ( (buf>=0) & (buf<=9) )
+  if ( (buf>=0) & (buf<=byte_max_range+1) )
   {
     byte_reciev_value = buf;
   }
